@@ -1,13 +1,60 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row gap-4">
-   <NavLink to ="/"> Home </NavLink>
-   <NavLink to = "/pastes"> Pastes </NavLink>
+    <nav className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="max-w-6xl mx-auto px-7 py-3 flex items-center justify-between">
+        
+        {/* Logo */}
+        <h1 className="text-2xl font-bold text-blue-600 cursor-pointer">
+          PasteApp
+        </h1>
 
-    </div>
-  )
-}
+        {/* Navigation Links */}
+        <div className="flex items-center gap-8 text-lg font-medium">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `relative transition-all duration-300 ${
+                isActive
+                  ? "text-blue-600"
+                  : "text-gray-700 hover:text-blue-600"
+              }
+              after:content-[''] after:absolute after:left-0 after:-bottom-1
+              after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300
+              ${
+                isActive
+                  ? "after:w-full"
+                  : "after:w-0 hover:after:w-full"
+              }`
+            }
+          >
+            Home
+          </NavLink>
 
-export default Navbar
+          <NavLink
+            to="/pastes"
+            className={({ isActive }) =>
+              `relative transition-all duration-300 ${
+                isActive
+                  ? "text-blue-600"
+                  : "text-gray-700 hover:text-blue-600"
+              }
+              after:content-[''] after:absolute after:left-0 after:-bottom-1
+              after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300
+              ${
+                isActive
+                  ? "after:w-full"
+                  : "after:w-0 hover:after:w-full"
+              }`
+            }
+          >
+             My Pastes
+          </NavLink>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
