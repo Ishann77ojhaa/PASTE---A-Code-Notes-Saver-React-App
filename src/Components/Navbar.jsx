@@ -1,14 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-6xl mx-auto px-7 py-3 flex items-center justify-between">
         
-        {/* Logo */}
-        <h1 className="text-2xl font-bold text-blue-600 cursor-pointer">
-          PasteApp
-        </h1>
+        <div className="text-2xl font-bold text-blue-600 cursor-pointer" onClick={()=>navigate("/")}>
+          Pastify
+        </div>
 
         {/* Navigation Links */}
         <div className="flex items-center gap-8 text-lg font-medium">

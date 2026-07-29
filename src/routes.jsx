@@ -1,28 +1,28 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./Components/Home";
 import Pastes from "./Components/Pastes";
-import Navbar from "./Components/Navbar";
+import Navvbar from "./Components/navvbar";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <div> 
-      <Navbar/>
+      <Navvbar/>
       <Home/>
     </div>
   },
   {
     path: "/pastes",
     element: <div>
-    <Navbar/>
+    <Navvbar/>
     <Pastes/>
     </div>
   },
   {
     path: "/pastes/:id",
     element: <div> 
-      <Navbar/>
+      <Navvbar/>
     </div>
   }
 ]);
