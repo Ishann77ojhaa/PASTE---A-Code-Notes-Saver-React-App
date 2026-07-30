@@ -22,7 +22,7 @@ export const pasteSlice = createSlice({
       const index = state.pastes.findIndex((item) => item._id === paste._id);
       if (index >= 0) {
         state.pastes[index] = paste;
-        localStorage.setItem("pastes".JSON.stringfy(state.pastes));
+        localStorage.setItem("pastes", JSON.stringify(state.pastes));
         toast.success("Paste Updated");
       }
     },

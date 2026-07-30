@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./Components/Home";
 import Pastes from "./Components/Pastes";
 import Navvbar from "./Components/navvbar";
-
+import ViewSinglePaste from "./Components/ViewSinglePaste";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +23,7 @@ const router = createBrowserRouter([
     path: "/pastes/:id",
     element: <div> 
       <Navvbar/>
+      <ViewSinglePaste/>
     </div>
   }
 ]);
