@@ -4,6 +4,7 @@ import Pastes from "./Components/Pastes";
 import Navvbar from "./Components/navvbar";
 import ViewSinglePaste from "./Components/ViewSinglePaste";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
